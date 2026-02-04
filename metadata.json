@@ -1,0 +1,9 @@
+{
+  "name": "Copy of Copy of TrueChance - High-Fidelity Coin Toss",
+  "description": "A hyper-realistic 3D coin toss simulator using entropy-based randomness from system time, CSPRNG, and device movement.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
