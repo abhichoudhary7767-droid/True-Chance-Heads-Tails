@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { TossResult, AppState } from '../types';
+import { TossResult, AppState } from './types';
 
 interface CoinProps {
   status: AppState;
