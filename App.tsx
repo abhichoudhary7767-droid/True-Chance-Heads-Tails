@@ -1,11 +1,11 @@
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Coin from './components/Coin';
-import { EntropyEngine } from './services/EntropyEngine';
-import { AudioService } from './services/AudioService';
-import { HapticService } from './services/HapticService';
-import { AppState, TossResult } from './types';
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+import Coin from "./Coin";
+import { EntropyEngine } from "./EntropyEngine";
+import { AudioService } from "./AudioService";
+import { HapticService } from "./HapticService";
 
 const App: React.FC = () => {
   const [status, setStatus] = useState<AppState>(AppState.IDLE);
