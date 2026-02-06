@@ -163,6 +163,7 @@ const App: React.FC = () => {
           )}
         </AnimatePresence>
       </div>
+      
 
       {/* Background Ambience */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
