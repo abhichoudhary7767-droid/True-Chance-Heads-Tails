@@ -3,7 +3,10 @@ export type TossResult = 'HEADS' | 'TAILS' | null;
 
 export interface EntropyData {
   timestamp: number;
-  randomValues: Uint32Array;
+
+  // Store as number[] so it is serializable, safe for WebView & workers
+  randomValues: number[];
+
   accel?: {
     x: number;
     y: number;
