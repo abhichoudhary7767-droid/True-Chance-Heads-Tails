@@ -1,39 +1,31 @@
-
 export class HapticService {
-  /**
-   * Crisp tap for mechanical feel.
-   */
+  private static vibrate(pattern: number | number[]) {
+    try {
+      if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') {
+        navigator.vibrate(pattern)
+      }
+    } catch {
+      // Silently ignore – never crash the app
+    }
+  }
+
+  /** Crisp tap for mechanical feel */
   static triggerToss() {
-    if ('vibrate' in navigator) {
-      navigator.vibrate(15);
-    }
+    this.vibrate(15)
   }
 
-  /**
-   * Heavy impact for the landing.
-   */
+  /** Heavy impact for the landing */
   static triggerImpact() {
-    if ('vibrate' in navigator) {
-      // One solid hit
-      navigator.vibrate(40);
-    }
+    this.vibrate(40)
   }
 
-  /**
-   * Final heavy buzz for the result reveal.
-   */
+  /** Final heavy buzz for the result reveal */
   static triggerResult() {
-    if ('vibrate' in navigator) {
-      navigator.vibrate([100]);
-    }
+    this.vibrate([100])
   }
 
-  /**
-   * Small ticks for the settling wobble.
-   */
+  /** Small ticks for the settling wobble */
   static triggerWobble() {
-    if ('vibrate' in navigator) {
-      navigator.vibrate([10, 30, 10]);
-    }
+    this.vibrate([10, 30, 10])
   }
 }
